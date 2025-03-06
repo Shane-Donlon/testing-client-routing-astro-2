@@ -9,4 +9,7 @@ export default defineConfig({
 
   integrations: [qwikdev()],
   adapter: netlify(),
+  prefetch: {
+    defaultStrategy: "viewport",
+  },
 });
