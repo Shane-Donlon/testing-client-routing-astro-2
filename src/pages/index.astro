@@ -6,12 +6,18 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Qwik + Astro">
-	<main id="app">
+  <a href="/test/">test</a>
+  <a href="/about/">about</a>
+  <main id="app">
     <div class="brand">
       <a href="https://qwik.dev" target="_blank" rel="noreferrer">
         <img src={qwikLogo} class="logo qwik" alt="Qwik logo" />
       </a>
-      <a href="https://github.com/QwikDev/astro" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/QwikDev/astro"
+        target="_blank"
+        rel="noreferrer"
+      >
         <span class="love">💜</span>
       </a>
       <a href="https://astro.build" target="_blank" rel="noreferrer">
@@ -19,18 +25,20 @@ import Layout from "../layouts/Layout.astro";
       </a>
     </div>
     <h1>Qwik + Astro</h1>
-		<p class="motivation">
-      Thanks to <a href="https://github.com/QwikDev/astro" title="@QwikDev/astro integration">@QwikDev/astro</a>, seamlessly integrate your Qwik components into your Astro project, as shown with the counter below.
+    <p class="motivation">
+      Thanks to <a
+        href="https://github.com/QwikDev/astro"
+        title="@QwikDev/astro integration">@QwikDev/astro</a
+      >, seamlessly integrate your Qwik components into your Astro project, as
+      shown with the counter below.
     </p>
     <Counter />
-    <p class="read-the-docs">
-      Click on the Qwik and Astro logos to learn more
-    </p>
-	</main>
+    <p class="read-the-docs">Click on the Qwik and Astro logos to learn more</p>
+  </main>
 </Layout>
 
 <style is:global>
-#app {
+  #app {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
