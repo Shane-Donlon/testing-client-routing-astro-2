@@ -8,15 +8,6 @@ interface Props {
 
 const { title } = Astro.props;
 import { Nav } from "@components/nav";
-const { url } = Astro.request;
-if (url.includes("localhost")) {
-  Astro.response.headers.set("Cache-Control", "no-store");
-} else {
-  Astro.response.headers.set(
-    "Cache-Control",
-    "stale-while-revalidate=604800, max-age=5"
-  );
-}
 ---
 
 <!doctype html>
@@ -32,8 +23,7 @@ if (url.includes("localhost")) {
     <title>{title}</title>
   </head>
   <body>
-    <Nav transition:persist client:load />
-    <Nav transition:persist />
+    <Nav transition />
     <slot />
   </body>
 </html>
