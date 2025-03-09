@@ -8,6 +8,7 @@ interface Props {
 
 const { title } = Astro.props;
 import { Nav } from "@components/nav";
+import { Persist } from "@components/persist";
 ---
 
 <!doctype html>
@@ -23,7 +24,10 @@ import { Nav } from "@components/nav";
     <title>{title}</title>
   </head>
   <body>
-    <Nav transition />
+    <Persist persistKey="nav" persist={true}>
+      <Nav />
+    </Persist>
+
     <slot />
   </body>
 </html>

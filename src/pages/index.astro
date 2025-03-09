@@ -4,45 +4,48 @@ import qwikLogo from "../assets/qwik.svg?url";
 import { Counter } from "../components/counter.tsx";
 import Layout from "../layouts/Layout.astro";
 import { Nav } from "../components/nav";
+import { Persist } from "../components/persist.tsx";
 ---
 
 <Layout title="Qwik + Astro">
   index page
-  <Counter transition />
+  <Persist persistKey="counter">
+    <Counter />
+  </Persist>
   <p class="read-the-docs">Click on the Qwik and Astro logos to learn more</p>
-</Layout>
 
-<style is:global>
-  #app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
-  .brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .love {
-    display: inline-block;
-    font-size: 1.5em;
-  }
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.qwik:hover {
-    filter: drop-shadow(0 0 2em #673ab8aa);
-  }
-  .motivation {
-    font-size: 1.25em;
-    font-weight: 300;
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
+  <style is:global>
+    #app {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .love {
+      display: inline-block;
+      font-size: 1.5em;
+    }
+    .logo {
+      height: 6em;
+      padding: 1.5em;
+    }
+    .logo:hover {
+      filter: drop-shadow(0 0 2em #646cffaa);
+    }
+    .logo.qwik:hover {
+      filter: drop-shadow(0 0 2em #673ab8aa);
+    }
+    .motivation {
+      font-size: 1.25em;
+      font-weight: 300;
+    }
+    .read-the-docs {
+      color: #888;
+    }
+  </style>
+</Layout>
